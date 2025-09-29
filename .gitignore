@@ -207,3 +207,4 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 server/routes/test_auth.py
+server/test_db.py
