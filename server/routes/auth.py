@@ -3,7 +3,7 @@ from google.oauth2 import id_token
 from google.auth.transport import requests
 from schemas.auth import GoogleLoginSchema
 from schemas.user import UserOut
-from db.mongo import db
+from db import db
 from utils.jwt_utils import create_jwt
 from datetime import datetime, timezone
 from core.config import GOOGLE_CLIENT_ID
