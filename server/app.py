@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
 from routes.auth import router as auth_router
 from routes.hikes import router as hike_router
+from routes.user import router as user_router
+
 
 app = FastAPI(
     title="Pathify Backend",
@@ -24,6 +26,8 @@ def hello():
 # -----------------------------
 app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
 app.include_router(hike_router, prefix="/hike", tags=["Hikes"])
+app.include_router(user_router, prefix="/users", tags=["Users"])
+
 
 # -----------------------------
 # Custom OpenAPI
